@@ -10,10 +10,10 @@
     </parent>
 
     <groupId>com.ada.poc</groupId>
-    <artifactId>ada</artifactId>
+    <artifactId>prono</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
-    <name>Ada</name>
+    <name>Prono</name>
 
     <prerequisites>
         <maven>${maven.version}</maven>
