@@ -1,0 +1,56 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myPronoBetLabel" data-translate="adaApp.pronoBet.home.createOrEditLabel">Create or edit a Prono Bet</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.pronoBet.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.pronoBet.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="adaApp.pronoBet.user" for="field_user">User</label>
+            <input type="text" class="form-control" name="user" id="field_user"
+                    ng-model="vm.pronoBet.user"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="adaApp.pronoBet.score1" for="field_score1">Score 1</label>
+            <input type="number" class="form-control" name="score1" id="field_score1"
+                    ng-model="vm.pronoBet.score1"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="adaApp.pronoBet.score2" for="field_score2">Score 2</label>
+            <input type="number" class="form-control" name="score2" id="field_score2"
+                    ng-model="vm.pronoBet.score2"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="adaApp.pronoBet.result" for="field_result">Result</label>
+            <input type="number" class="form-control" name="result" id="field_result"
+                    ng-model="vm.pronoBet.result"
+                    />
+        </div>
+
+        <div class="form-group">
+            <label data-translate="adaApp.pronoBet.pronoGame" for="field_pronoGame">Prono Game</label>
+            <select class="form-control" id="field_pronoGame" name="pronoGame" ng-model="vm.pronoBet.pronoGameId" ng-options="pronoGame.id as pronoGame.id for pronoGame in vm.pronogames"            >
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

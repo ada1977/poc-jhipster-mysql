@@ -1,0 +1,22 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "game",
+            "otherEntityName": "pronoGame",
+            "otherEntityRelationshipName": "pronoLeague"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "leagueName",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170319160153",
+    "entityTableName": "prono_league",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

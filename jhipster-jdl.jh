@@ -1,0 +1,33 @@
+entity PronoLeague {
+	leagueName String
+}
+
+entity PronoGame {
+    gameNumber String
+    date ZonedDateTime
+    team1 String
+    team2 String
+    score1 Integer
+    score2 Integer
+}
+
+entity PronoBet {
+	user String
+    score1 Integer
+    score2 Integer
+	result Integer
+}
+
+relationship OneToMany {
+	PronoLeague{game} to PronoGame,
+    PronoGame{bet} to PronoBet
+}
+
+paginate PronoLeague with pagination
+paginate PronoGame with infinite-scroll
+
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
+

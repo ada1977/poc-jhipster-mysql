@@ -1,0 +1,48 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "pronoLeague",
+            "otherEntityName": "pronoLeague",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "bet",
+            "otherEntityName": "pronoBet",
+            "otherEntityRelationshipName": "pronoGame"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "gameNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "date",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "team1",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "team2",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "score1",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "score2",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20170319160153",
+    "entityTableName": "prono_game",
+    "dto": "mapstruct",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl"
+}

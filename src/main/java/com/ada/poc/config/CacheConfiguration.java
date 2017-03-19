@@ -42,6 +42,11 @@ public class CacheConfiguration {
             cm.createCache(com.ada.poc.domain.User.class.getName() + ".authorities", jcacheConfiguration);
             cm.createCache(com.ada.poc.domain.PersistentToken.class.getName(), jcacheConfiguration);
             cm.createCache(com.ada.poc.domain.User.class.getName() + ".persistentTokens", jcacheConfiguration);
+            cm.createCache(com.ada.poc.domain.PronoBet.class.getName(), jcacheConfiguration);
+            cm.createCache(com.ada.poc.domain.PronoGame.class.getName(), jcacheConfiguration);
+            cm.createCache(com.ada.poc.domain.PronoGame.class.getName() + ".bets", jcacheConfiguration);
+            cm.createCache(com.ada.poc.domain.PronoLeague.class.getName(), jcacheConfiguration);
+            cm.createCache(com.ada.poc.domain.PronoLeague.class.getName() + ".games", jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }

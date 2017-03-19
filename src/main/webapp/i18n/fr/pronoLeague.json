@@ -1,0 +1,22 @@
+{
+    "adaApp": {
+        "pronoLeague" : {
+            "home": {
+                "title": "PronoLeagues",
+                "createLabel": "Créer un nouveau Prono League",
+                "createOrEditLabel": "Créer ou éditer un Prono League"
+            },
+            "created": "Un nouveau Prono League a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Prono League avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Prono League avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Prono League {{ id }} ?"
+            },
+            "detail": {
+                "title": "Prono League"
+            },
+            "leagueName": "League Name",
+            "game": "Game"
+        }
+    }
+}

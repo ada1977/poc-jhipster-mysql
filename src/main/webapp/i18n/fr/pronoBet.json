@@ -1,0 +1,25 @@
+{
+    "adaApp": {
+        "pronoBet" : {
+            "home": {
+                "title": "PronoBets",
+                "createLabel": "Créer un nouveau Prono Bet",
+                "createOrEditLabel": "Créer ou éditer un Prono Bet"
+            },
+            "created": "Un nouveau Prono Bet a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Prono Bet avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Prono Bet avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Prono Bet {{ id }} ?"
+            },
+            "detail": {
+                "title": "Prono Bet"
+            },
+            "user": "User",
+            "score1": "Score 1",
+            "score2": "Score 2",
+            "result": "Result",
+            "pronoGame": "Prono Game"
+        }
+    }
+}

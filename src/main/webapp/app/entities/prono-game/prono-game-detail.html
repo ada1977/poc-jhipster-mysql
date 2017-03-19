@@ -1,0 +1,47 @@
+
+<div>
+    <h2><span data-translate="adaApp.pronoGame.detail.title">Prono Game</span> {{vm.pronoGame.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="adaApp.pronoGame.gameNumber">Game Number</span></dt>
+        <dd>
+            <span>{{vm.pronoGame.gameNumber}}</span>
+        </dd>
+        <dt><span data-translate="adaApp.pronoGame.date">Date</span></dt>
+        <dd>
+            <span>{{vm.pronoGame.date | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="adaApp.pronoGame.team1">Team 1</span></dt>
+        <dd>
+            <span>{{vm.pronoGame.team1}}</span>
+        </dd>
+        <dt><span data-translate="adaApp.pronoGame.team2">Team 2</span></dt>
+        <dd>
+            <span>{{vm.pronoGame.team2}}</span>
+        </dd>
+        <dt><span data-translate="adaApp.pronoGame.score1">Score 1</span></dt>
+        <dd>
+            <span>{{vm.pronoGame.score1}}</span>
+        </dd>
+        <dt><span data-translate="adaApp.pronoGame.score2">Score 2</span></dt>
+        <dd>
+            <span>{{vm.pronoGame.score2}}</span>
+        </dd>
+        <dt><span data-translate="adaApp.pronoGame.pronoLeague">Prono League</span></dt>
+        <dd>
+            <a ui-sref="prono-league-detail({id:vm.pronoGame.pronoLeagueId})">{{vm.pronoGame.pronoLeagueId}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="prono-game-detail.edit({id:vm.pronoGame.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>
