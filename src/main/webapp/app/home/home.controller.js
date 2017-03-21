@@ -9,16 +9,18 @@
 
     function HomeController ($scope, Principal, LoginService, $state) {
         var vm = this;
-
         vm.account = null;
         vm.isAuthenticated = null;
         vm.login = LoginService.open;
         vm.register = register;
+
         $scope.$on('authenticationSuccess', function() {
             getAccount();
         });
 
         getAccount();
+
+        vm.prono = prono;
 
         function getAccount() {
             Principal.identity().then(function(account) {
@@ -29,5 +31,10 @@
         function register () {
             $state.go('register');
         }
+
+        function prono () {
+            $state.go('prono');
+
+         }
     }
 })();

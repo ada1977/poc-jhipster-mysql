@@ -1,0 +1,44 @@
+<div>
+    <h2 data-translate="adaApp.prono.home.title">Prono</h2>
+    <jhi-alert></jhi-alert>
+
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="adaApp.prono.user">User</span></th>
+                    <th><span data-translate="adaApp.prono.team1">Team 1</span></th>
+                    <th><span data-translate="adaApp.prono.team2">Team 2</span></th>
+                    <th><span data-translate="adaApp.prono.score1">Score 1</span></th>
+                    <th><span data-translate="adaApp.prono.score2">Score 2</span></th>
+                    <th><span data-translate="adaApp.prono.result">Result</span></th>
+                    <th><span data-translate="adaApp.prono.pronoGame">Prono Game</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="prono in vm.pronos track by prono.id">
+                    <td>{{prono.user}}</td>
+                    <td>{{prono.team1}}</td>
+                    <td>{{prono.team2}}</td>
+                    <td><input ng-show="true">{{prono.score1}}</input></td>
+                    <td><input ng-show="true">{{prono.score2}}</input></td>
+                    <td>{{prono.result}}</td>
+
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="prono-detail({id:prono.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

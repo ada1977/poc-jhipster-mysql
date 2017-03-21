@@ -5,6 +5,9 @@
         "logged": {
             "message": "Vous êtes connecté en tant que \"{{username}}\"."
         },
+        "ldc": {
+            "message": " <a class=\"alert-link\" href=\"\" ng-click=\"vm.prono()\">Ligue des Champions</a>"
+        },
         "question": "Si vous avez des questions à propos de JHipster :",
         "link": {
             "homepage": "Page d'accueil de JHipster",

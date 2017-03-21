@@ -5,6 +5,9 @@
         "logged": {
             "message": "You are logged in as user \"{{username}}\"."
         },
+        "ldc": {
+            "message": " <a class=\"alert-link\" href=\"\" ng-click=\"vm.prono()\">Champion's league</a>"
+        },
         "question": "If you have any question on JHipster:",
         "link": {
             "homepage": "JHipster homepage",
